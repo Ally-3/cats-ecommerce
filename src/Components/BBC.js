@@ -1,9 +1,9 @@
-import '../BBC/BBC.css';
-import bbc1 from '../../images/BBC1.jpg';
-import bbc2 from '../../images/BBC2.jpg';
-import bbc3 from '../../images/BBC3.jpg';
-import bbc4 from '../../images/BBC4.jpg';
-import bbcClock from '../../images/bbcClock.png';
+import '../Components/BBC.css';
+import bbc1 from '../images/BBC1.jpg';
+import bbc2 from '../images/BBC2.jpg';
+import bbc3 from '../images/BBC3.jpg';
+import bbc4 from '../images/BBC4.jpg';
+import bbcClock from '../images/bbcClock.png';
 
 const BBC = () => {
     return (

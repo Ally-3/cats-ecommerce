@@ -1,4 +1,4 @@
-import BBC from './components/BBC';
+import BBC from './Components/BBC';
 import './App.css';
 
 function App() {
