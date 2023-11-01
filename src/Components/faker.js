@@ -1,19 +1,15 @@
 import React from 'react';
-import faker from 'faker';
+import { animal } from '@faker-js/faker';
 
-function UserProfile() {
-  const fakeName = faker.name.findName();
-  const fakeEmail = faker.internet.email();
-  const fakeAddress = faker.address.streetAddress();
+function RandomCat() {
+  const randomCat = animal.cat();
 
   return (
     <div>
-      <h2>User Profile</h2>
-      <p>Name: {fakeName}</p>
-      <p>Email: {fakeEmail}</p>
-      <p>Address: {fakeAddress}</p>
+      <h2>A Random Cat</h2>
+      <p>Type: {randomCat}</p>
     </div>
   );
 }
 
-export default UserProfile;
+export default RandomCat;

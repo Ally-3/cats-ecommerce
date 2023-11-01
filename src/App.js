@@ -1,12 +1,12 @@
 import BBC from './Components/BBC';
-import Faker from './Components/faker';
+import RandomCat from './Components/Faker';
 import './App.css';
 
 function App() {
   return (
     <div>
       <BBC />
-      <Faker />
+      <RandomCat />
     </div>
   );
 }
