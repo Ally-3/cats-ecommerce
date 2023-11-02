@@ -1,4 +1,5 @@
 import Cats from './Components/Cats';
+import Cat from './Components/Cat';
 import RandomCat from './Components/faker';
 import './App.css';
 import Landing from './Components/Landing';
@@ -17,6 +18,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <RandomCat />
+      <Cat />
     </div>
   );
 }
