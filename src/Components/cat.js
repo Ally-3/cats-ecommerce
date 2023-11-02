@@ -1,11 +1,11 @@
 import '../Components/cat.css';
-import bbc1 from '../images/BBC1.jpg';
-import bbc2 from '../images/BBC2.jpg';
-import bbc3 from '../images/BBC3.jpg';
-import bbc4 from '../images/BBC4.jpg';
-import bbcClock from '../images/bbcClock.png';
+import cat1 from '../images/cat1.jpg';
+import cat2 from '../images/cat2.jpg';
+import cat3 from '../images/cat3.jpg';
+import cat4 from '../images/cat4.jpg';
+import catClock from '../images/catClock.png';
 
-const BBC = () => {
+const cat = () => {
     return (
         <div className="cat-parent">
 
