@@ -5,7 +5,7 @@ import cat3 from '../images/cat3.jpg';
 import cat4 from '../images/cat4.jpg';
 import catClock from '../images/catClock.png';
 
-const cat = () => {
+const CatsCard = () => {
     return (
         <div className="cat-parent">
 
@@ -73,4 +73,4 @@ const cat = () => {
     )
 }
 
-export default cat;
+export default CatsCard;
