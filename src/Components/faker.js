@@ -1,8 +1,8 @@
 import React from 'react';
-import { animal } from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 
 function RandomCat() {
-  const randomCat = animal.cat();
+  const randomCat = faker.animal.cat();
 
   return (
     <div>
