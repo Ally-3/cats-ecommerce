@@ -1,32 +1,32 @@
-.BBC-parent {
+.cat-parent {
     display: flex;
     flex-direction: row;
     width: 75%;
     margin: 50px auto;
 }
 
-.BBC-child {
+.cat-child {
     display: flex;
     flex-direction: column;
     width: 25%;
     margin:10px;
 }
 
-.BBC-child img {
+.cat-child img {
     width: 100%;
 
 }
 
-.BBC-h3, .BBC-p, .BBC-bottom {
+.cat-h3, .BBC-p, .BBC-bottom {
     width: 90%;
 }
 
-.BBC-h3 {
+.cat-h3 {
     font-size: 12px;
     margin: 0px;
 }
 
-.BBC-p {
+.cat-p {
     margin-block-start: 0em;
     margin-block-end: 0em;
     font-size: 12px;
@@ -34,11 +34,11 @@
     margin-bottom: 0px;
 }
 
-.BBC-bottom {
+.cat-bottom {
     font-size: 10px;
     margin: 0px ;
 }
 
-.BBC-bottom img {
+.cat-bottom img {
     width: 9px
 }
