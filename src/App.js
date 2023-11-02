@@ -1,4 +1,4 @@
-import BBC from './Components/BBC';
+import cat from './Components/cat';
 import RandomCat from './Components/faker';
 import './App.css';
 
