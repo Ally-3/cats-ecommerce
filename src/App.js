@@ -5,8 +5,13 @@ import './App.css';
 import Landing from './Components/Landing';
 import Navbar from './Components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import  CatImages  from './Components/CatImages';
+import { useState} from 'react';
 
 function App() {
+  const [cats, setCats] = useState ([])
+  Cats (setCats)
+  console.log(cats)
   return (
     <div className="App">
       <Navbar />
@@ -16,8 +21,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="AboutUs" element={<Landing />} />
-          <Route path="Buy" element={<CatsCard/>} />
+          <Route path="Buy" element={<CatsCard/> } />
           <Route path="ContactUs" element={<Landing />} />
+          <Route path="/CatsAPI" element={<CatImages cats={cats} />} />
           <Route path="Basket" element={<Landing />} />
         </Routes>
       </BrowserRouter>
