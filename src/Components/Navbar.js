@@ -3,9 +3,11 @@ import { Wrapper, NavbarItem } from './Navbar.styles';
 const Navbar = () => {
  return (
  <Wrapper>
- <NavbarItem>Home</NavbarItem>
- <NavbarItem>About</NavbarItem>
- <NavbarItem>Contact</NavbarItem>
+ <NavbarItem href="/">Home</NavbarItem>
+ <NavbarItem href="/AboutUs">About Us</NavbarItem>
+ <NavbarItem href="/Buy">Buy</NavbarItem>
+ <NavbarItem href="/ContactUs">Contact Us</NavbarItem>
+ <NavbarItem href="/Basket">Basket</NavbarItem>
  </Wrapper>
  );
 };

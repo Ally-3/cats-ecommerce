@@ -15,6 +15,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="AboutUs" element={<Landing />} />
+          <Route path="Buy" element={<Landing />} />
+          <Route path="ContactUs" element={<Landing />} />
+          <Route path="Basket" element={<Landing />} />
         </Routes>
       </BrowserRouter>
       <RandomCat />
