@@ -1,4 +1,4 @@
-import { Wrapper} from './Landing.styles';
+import { Wrapper} from '../Pages/pages.styles';
 import { Container } from './CatImages.styles';
 import CatCard from './CatCard';
 

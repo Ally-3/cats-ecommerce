@@ -2,26 +2,26 @@ import '../Components/cat.css';
 import React from 'react';
 import { faker } from '@faker-js/faker';
 import { useState} from 'react';
-import Cats from './Cats';
-import CatImages from './CatImages';
+import Cats from '../Components/Cats';
+import CatImages from '../Components/CatImages';
 
-const CatsCard = () => {
+const BuyCats= () => {
 
-    const url = `https://api.thecatapi.com/v1/breeds`;
-    const api_key = "live_91UUUxVS7iytjEtAwTDR1X60zOggJPrrqkT2ZXkj3s7WxqfRWwRiwt6oPR54dHr1";
+    // const url = `https://api.thecatapi.com/v1/breeds`;
+    // const api_key = "live_91UUUxVS7iytjEtAwTDR1X60zOggJPrrqkT2ZXkj3s7WxqfRWwRiwt6oPR54dHr1";
 
-    fetch(url,{headers: {
-        'x-api-key': api_key
-      }})
+    // fetch(url,{headers: {
+    //     'x-api-key': api_key
+    //   }})
       
-    const [cats, setCats] = useState ([])
-    Cats (setCats)
-    console.log(cats)
+    const [cats, setCats] = useState ([]);
+    // Cats (setCats)
+    // console.log(cats)
 
     return (
         <div className="cat-parent">
             {Array.from({ length: 4 }).map((_, index) => {
-                const name = faker.name.firstName();
+                const name = faker.person.firstName();
                 const price = faker.commerce.price();
                 const breed = faker.animal.cat();
                     return (
@@ -55,4 +55,4 @@ const CatsCard = () => {
     
 // }
 
-export default CatsCard;
+export default BuyCats;

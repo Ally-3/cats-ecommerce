@@ -1,9 +1,10 @@
 import { ContainerChild, CatImage } from './CatImages.styles';
+import CatImages from './CatImages';
 
 const CatCard = (props) => {
     return (
         <ContainerChild>
-            <CatImage src={props.cat.url}></CatImage>
+            <CatImages src={props.cat.url}></CatImages>
         </ContainerChild>
     );
 };

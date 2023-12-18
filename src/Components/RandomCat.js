@@ -1,12 +1,13 @@
 import React from 'react';
 import { faker } from '@faker-js/faker';
+import '../App.css';
 
 function RandomCat() {
   const randomCat = faker.animal.cat();
 
   return (
-    <div>
-      <h2>A Random Cat</h2>
+    <div className='randomcat-container'>
+      <h2>🌟 Here is a random cat:</h2>
       <p>Type: {randomCat}</p>
     </div>
   );
