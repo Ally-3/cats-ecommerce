@@ -37,6 +37,7 @@ const BuyCats = (props) => {
         const name = faker.person.firstName();
         const price = faker.commerce.price();
         const breed = faker.animal.cat();
+        const imageUrl = cats.length > 0 ? cats[index % cats.length].image.url : '';
         return (
           <div key={index} className="cat-child">
             <div className="cat-images">
