@@ -1,58 +1,66 @@
 import '../Components/cat.css';
 import React from 'react';
 import { faker } from '@faker-js/faker';
-import { useState} from 'react';
+import { useState, useEffect} from 'react';
 import Cats from '../Components/Cats';
 import CatImages from '../Components/CatImages';
 
 const BuyCats= () => {
-
-    // const url = `https://api.thecatapi.com/v1/breeds`;
-    // const api_key = "live_91UUUxVS7iytjEtAwTDR1X60zOggJPrrqkT2ZXkj3s7WxqfRWwRiwt6oPR54dHr1";
-
-    // fetch(url,{headers: {
-    //     'x-api-key': api_key
-    //   }})
-      
     const [cats, setCats] = useState ([]);
-    // Cats (setCats)
-    // console.log(cats)
+
+    useEffect(() => {
+        const url = `https://api.thecatapi.com/v1/breeds`;
+        const api_key = "live_91UUUxVS7iytjEtAwTDR1X60zOggJPrrqkT2ZXkj3s7WxqfRWwRiwt6oPR54dHr1";
+    
+        fetch(url,{
+            headers: {
+            'x-api-key': api_key
+          },
+        })
+        .then((response) => response.json())
+        .then((data) => {
+          setCats(data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }, []); // Empty dependency array to ensure the effect runs only once
 
     return (
         <div className="cat-parent">
-            {Array.from({ length: 4 }).map((_, index) => {
+            {Array.from({ length: 12 }).map((_, index) => {
                 const name = faker.person.firstName();
                 const price = faker.commerce.price();
                 const breed = faker.animal.cat();
-                    return (
+    
+                return (
                     <div key={index} className="cat-child">
-                        <div className="cat-image">
-                            <img element={<CatImages Cats={cats} />} alt="cat"></img>
+                        <div className="cat-images">
+                            <CatImages cats={cats} />
                         </div>
-                        <div className="cat-h3">
-                            <h3>Name : {name} </h3>
-                        </div>
-                        <div className="cat-bottom">
-                            <p><b>Breed: </b>{breed}</p>
-                        </div>
-                        <div className="cat-p">
-                            <p>Price: {price}</p>
-                        </div>
-                        <div className="buy-button">
-                            <button data-item-price={price}>Buy now</button>
+                        <div>
+                            <h3 className="cat-name">Name: {name} </h3>
+                            <h3 className="cat-breed">Breed: {breed}</h3>
+                            <h3 className="cat-price">Price: £{price}</h3>
+                            <button
+                                className="buy-button"
+                                data-item-price={price}
+                            >
+                                Buy now
+                            </button>
                         </div>
                     </div>
-                    );
+                );
             })}
         </div>
-)}
+    );
+}    
 
-// document.querySelector("/buy-button").addEventListener("click", () => {
+{/* document.querySelector("/buy-button").addEventListener("click", () => { */}
 
-// });
+{/* }); */}
 
-// buy(){
+{/* buy(){ */}
     
-// }
 
 export default BuyCats;

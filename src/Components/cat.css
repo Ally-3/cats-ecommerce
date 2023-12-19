@@ -1,6 +1,8 @@
 .cat-parent {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    justify-content: center;
     width: 75%;
     margin: 50px auto;
 }
@@ -8,37 +10,58 @@
 .cat-child {
     display: flex;
     flex-direction: column;
-    width: 25%;
-    margin:10px;
+    margin: 10px;
+    width: 50%;
+    height: auto;
+    padding: 50px;
+    background-color: rgba(207, 234, 245, 0.74); 
+    border: none;
+    border-radius: 10px;
 }
 
-.cat-child img {
-    width: 100%;
-
-}
-
-.cat-h3, .BBC-p, .BBC-bottom {
-    width: 90%;
-}
-
-.cat-h3 {
-    font-size: 12px;
-    margin: 0px;
-}
-
-.cat-p {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    font-size: 12px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.cat-bottom {
+.cat-child h3 {
     font-size: 10px;
-    margin: 0px ;
+    margin: none;
+    line-height: 12px;
 }
 
-.cat-bottom img {
-    width: 9px
+.cat-child p {
+    font-size: 12px;
+    margin: none;
+    height: 5px;
+}
+
+.cat-image {
+    height: 150px;
+    width: 150px;
+    margin-right: 0px;
+    border-radius: 5px;
+}
+
+.noCatImg {
+    height: 150px;
+    width: 150px;
+    margin-right: 0px;
+    border: 5px solid grey;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.cat-name, .cat-breed, .cat-price {
+    width: 150px;
+    height: 30px;
+    word-wrap: break-word; /* This property enables word wrap */
+}
+
+.buy-button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.buy-button:hover {
+    background-color: lightblue;
 }

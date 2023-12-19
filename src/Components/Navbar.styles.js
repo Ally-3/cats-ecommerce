@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
     justify-content: space-evenly;
+
     background-color: lightblue;
     padding: 1% 2%;
     border-bottom: 5px solid lightblue;
@@ -62,4 +63,15 @@ export const Heading = styled.h1`
         color: rgb(76, 77, 78);
         text-decoration: none;
      }
+`;
+
+export const Link = styled.a`
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+        color: rgb(76, 77, 78);
+        text-decoration: none;
+    }
 `;

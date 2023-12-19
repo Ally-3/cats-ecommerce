@@ -7,7 +7,7 @@
   background-image: url('images/cloudbg.jpg');
   background-size: cover; 
   background-position: center;
-  height: 100vh; /* Make the background cover 100% of the viewport height */
+  height: 100%; /* Make the background cover 100% of the viewport height */
   margin: 0; /* Remove default margin */
 }
 
@@ -109,4 +109,24 @@ form button {
 form button:hover {
   background-color: white;
   color:lightblue;
+}
+
+/* LINK NAVBAR */
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: rgb(76, 77, 78);
+  text-decoration: none;
+}
+
+/* CAT LOGO */
+img {
+  max-width: 100%; /* Adjust the width as needed */
+  height: 40px; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some spacing to the right of the image */
 }
