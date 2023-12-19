@@ -40,7 +40,7 @@ const BuyCats = (props) => {
         const imageUrl = cats.length > 0 ? cats[index % cats.length].image.url : '';
         return (
           <div key={index} className="cat-child">
-            <div className="cat-images">
+            <div className="cat-image">
               <CatImages cats={cats} imageUrl={imageUrl} />
             </div>
             <div>
