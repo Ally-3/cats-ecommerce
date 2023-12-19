@@ -11,6 +11,7 @@ function Basket({ basketItems }) {
         {basketItems.length === 0 ? (
           <p>Your basket is empty.</p>
         ) : (
+          <div>  
           <ul className="basket-parent">
             {basketItems.map((item, index) => (
                 <li className="basket-child" key={index}>
@@ -23,9 +24,17 @@ function Basket({ basketItems }) {
                         <br></br>
                         Price:  £{item.price}
                     </div>
+                    <div className="basket-remove">
+                        <button className="bin-btn">🗑️</button>
+                    </div>
                 </li>
             ))}
           </ul>
+            <div className="basket-checkout">
+                <p>Total:{basketItems.reduce((sum, item) => sum + Number(item.price), 0).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}</p><br />
+                <button className="chk-btn">Proceed to checkout</button>
+            </div>
+          </div>
         )}
       </div>
     );

@@ -54,10 +54,13 @@
     border: none;
     border-radius: 5px;
     background-color: white;
+    font-family: Arial;
+    letter-spacing: 2px;
 }
 
 .buy-button:hover {
-    background-color: lightblue;
+    background-color: rgb(76, 77, 78);
+    color: lightblue;
 }
 
 /* BASKET */
@@ -69,6 +72,7 @@
     width: 100%;
     gap: 10px;
     margin: 50px auto;
+    padding: 0px;
 }
 
 .basket-child {
@@ -100,4 +104,65 @@
     font-size: 2em;
     font-family: arial;
     letter-spacing: 5px;
+}
+
+.basket-remove {
+    height: 150px;
+    display: flex;
+    flex-direction: column-reverse; 
+}
+
+.basket-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 40%;
+    max-width: 600px; /* Add a maximum width to prevent it from becoming too wide */
+    padding: 20px; /* Adjusted padding for a cleaner look */
+    height: auto;
+    padding: 50px;
+    background-color: rgba(207, 234, 245, 0.74); 
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box; /* Include padding in the total width */
+}
+
+.bin-btn {
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    padding: 0px;
+    display: flex;
+    align-content: center;
+}
+
+.bin-btn:hover {
+    background-color: rgb(240, 39, 39);
+    border-radius: 10px;
+}
+
+.chk-btn {
+    background-color: white;
+    font-family: Arial;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    height: 40px;
+    width: 170px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chk-btn:hover {
+    background-color: rgb(76, 77, 78);
+    color: lightblue;
 }
