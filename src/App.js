@@ -10,12 +10,19 @@ import Basket from './Pages/Basket';
 import ContactUs from './Pages/ContactUs';
 import BuyCats from './Pages/Buy';
 
-function App() {
-  const [cats, setCats] = useState ([]);
+function App(props) {
+
+  const [basketItems, setBasketItems] = useState([]);
+  const [imageUrl, setImageUrl] = useState ([]);
+
+  const handleBuyChange = (catDetails) => {
+    // Update the basketItems state with the new catDetails
+    setBasketItems((prevBasketItems) => [...prevBasketItems, catDetails]);
+    console.log('Cat details in parent:', catDetails);
+  };
 
   return (
     <div className="App">
-
       {/* Remember to import:
       import { BrowserRouter, Route, Routes } from 'react-router-dom'; */}
       <BrowserRouter>
@@ -23,10 +30,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/Buy" element={<BuyCats cats={cats} /> } />
+          <Route path="/Buy" element={<BuyCats onBuyChange={handleBuyChange}/> } />
           <Route path="/ContactUs" element={<ContactUs />} />
-          {/* <Route path="/CatsAPI" element={<CatImages cats={cats} />} /> */}
-          <Route path="/Basket" element={<Basket />} />
+          <Route path="/Basket" element={<Basket basketItems={basketItems} imageUrl={imageUrl} />} />
+
         </Routes>
       </BrowserRouter>
       <Footer />

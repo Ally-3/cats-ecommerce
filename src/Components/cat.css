@@ -29,20 +29,13 @@
     font-size: 12px;
     margin: none;
     height: 5px;
+    
 }
 
 .cat-image {
     height: 150px;
     width: 150px;
     margin-right: 0px;
-    border-radius: 5px;
-}
-
-.noCatImg {
-    height: 150px;
-    width: 150px;
-    margin-right: 0px;
-    border: 5px solid grey;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -64,4 +57,27 @@
 
 .buy-button:hover {
     background-color: lightblue;
+}
+
+/* BASKET */
+.basket-parent {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
+    margin: 50px auto;
+}
+
+.basket-child {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    width: 50%;
+    height: auto;
+    padding: 50px;
+    background-color: rgba(207, 234, 245, 0.74); 
+    border: none;
+    border-radius: 10px;
 }

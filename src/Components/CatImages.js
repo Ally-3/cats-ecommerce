@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './cat.css';
 
 const CatImages = ({ cats }) => {
   // Check if there are cats available
   if (cats.length === 0) {
-    return <div className='noCatImg'>No cat images available</div>;
+    return <div className="cat-image">No cat images available</div>;
   }
 
   const randomIndex = Math.floor(Math.random() * cats.length);
 
-    // Check if the selected cat has an image property
-    // Generate a random index to select a random cat
-    if (!cats[randomIndex].image || !cats[randomIndex].image.url) {
-        return <div className="cat-image">No cat image URL available</div>;
-      }
+  // Check if the selected cat has an image property and URL
+  const selectedCat = cats[randomIndex];
 
-  // Get the image URL of the randomly selected cat
-  const imageUrl = cats[randomIndex].image.url;
+  // Check if selectedCat is defined and has an image property
+  if (!selectedCat || !selectedCat.image) {
+    return <div className="cat-image">No cat image available</div>;
+  }
+
+  const imageUrl = selectedCat.image.url;
 
   return (
     <div>
