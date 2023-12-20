@@ -4,6 +4,7 @@
     gap: 10px;
     justify-content: center;
     width: 75%;
+    padding: 5% 0%;
     margin: 50px auto;
 }
 
@@ -40,6 +41,7 @@
     border-radius: 5px;
     display: flex;
     align-items: center;
+    object-fit: cover;
 }
 
 .cat-name, .cat-breed, .cat-price {

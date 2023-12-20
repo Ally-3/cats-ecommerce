@@ -4,7 +4,14 @@ import { CatImages } from "../Components/CatImages";
 import '../Components/cat.css';
 import '../App.css';
 
-function Basket({ basketItems }) {
+function Basket({ basketItems, setBasketItems }) {
+
+    const handleDelete = (index) => {
+    // Filter out the basketItems array to remove the item we want to delete
+    const updatedBasket = basketItems.filter((_, i) => i !== index);
+    setBasketItems(updatedBasket);
+  };
+
     return (
       <div className="body-container">
         <h2 className="basket-title">Your Basket</h2>
@@ -25,7 +32,11 @@ function Basket({ basketItems }) {
                         Price:  £{item.price}
                     </div>
                     <div className="basket-remove">
-                        <button className="bin-btn">🗑️</button>
+                        <button 
+                            type="button" 
+                            onClick={() => handleDelete(index)} // Pass the index to handleDelete
+                            className="bin-btn"
+                        >🗑️</button>
                     </div>
                 </li>
             ))}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState} from 'react';
 import { Link } from 'react-router-dom';
-import { Heading, Wrapper, NavbarItem } from './Navbar.styles';
+import { NavbarContainer, Heading, Wrapper, NavbarItem } from './Navbar.styles';
 import catlogo from '../images/catlogo.png';
 import '../App.css';
 
@@ -12,6 +12,7 @@ const [clickBuy, setClickBuy] = useState("");
 
    return (
      <div>
+      <NavbarContainer>
        <Wrapper>
          <Heading>
             <img src={catlogo} alt="Cat Logo" />
@@ -28,6 +29,7 @@ const [clickBuy, setClickBuy] = useState("");
            </NavbarItem>
          </Wrapper>
        </Wrapper>
+       </NavbarContainer>
      </div>
    );
  };

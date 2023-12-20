@@ -10,7 +10,7 @@ import Basket from './Pages/Basket';
 import ContactUs from './Pages/ContactUs';
 import BuyCats from './Pages/Buy';
 
-function App(props) {
+function App() {
 
   const [basketItems, setBasketItems] = useState([]);
   const [imageUrl, setImageUrl] = useState ([]);
@@ -32,7 +32,7 @@ function App(props) {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Buy" element={<BuyCats onBuyChange={handleBuyChange}/> } />
           <Route path="/ContactUs" element={<ContactUs />} />
-          <Route path="/Basket" element={<Basket basketItems={basketItems} imageUrl={imageUrl} />} />
+          <Route path="/Basket" element={<Basket basketItems={basketItems} setBasketItems={setBasketItems} imageUrl={imageUrl} />} />
 
         </Routes>
       </BrowserRouter>

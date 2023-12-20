@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { faker } from '@faker-js/faker';
-import CatImages from '../Components/CatImages';
+import '../Components/cat.css';
+// import CatImages from '../Components/CatImages'; //CatImages no longer necessary
 
 const BuyCats = (props) => {
   const [cats, setCats] = useState([]);
@@ -18,13 +19,16 @@ const BuyCats = (props) => {
       .then((response) => response.json())
       .then((data) => {
         setCats(data);
+        
       })
       .catch((error) => {
         console.log(error);
       });
   }, []); // Empty dependency array to ensure the effect runs only once
 
-  let clickBuy = ({ name, breed, price, imageUrl }) => {
+  let clickBuy = (event, { name, breed, price, imageUrl }) => {
+    console.log('Buy button clicked!');
+    event.preventDefault();
     if (typeof props.onBuyChange === 'function') {
       props.onBuyChange({ name, breed, price, imageUrl });
     }
@@ -38,10 +42,15 @@ const BuyCats = (props) => {
         const price = faker.commerce.price();
         const breed = faker.animal.cat();
         const imageUrl = cats.length > 0 ? cats[index % cats.length].image.url : '';
+
         return (
           <div key={index} className="cat-child">
             <div className="cat-image">
-              <CatImages cats={cats} imageUrl={imageUrl} />
+                {imageUrl ? (
+                <img id="image-cat" className="cat-image" alt="Cat" src={imageUrl} />
+                ) : (
+                <div className="cat-image">No cat images available</div>
+                )}
             </div>
             <div>
               <h3 className="cat-name">Name: {name} </h3>
@@ -50,7 +59,7 @@ const BuyCats = (props) => {
               <button
                 className="buy-button"
                 data-item-price={price}
-                onClick={() => clickBuy({ name, breed, price, imageUrl })}
+                onClick={(event) => clickBuy(event, { name, breed, price, imageUrl })}
               >
                 Buy now
               </button>

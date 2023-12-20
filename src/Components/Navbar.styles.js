@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const NavbarContainer = styled.div`
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Ensure the navbar stays on top of other content */
+`;
+
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
