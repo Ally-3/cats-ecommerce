@@ -42,19 +42,25 @@ const BuyCats = (props) => {
         const price = faker.commerce.price();
         const breed = faker.animal.cat();
 
-        return { name, price, breed, imageUrl };
+        return { name, price, breed, imageUrl, inBasket: false };
       });
 
       setCatData(generatedCatData);
     }
   }, [cats]);
 
-  let clickBuy = (event, { name, breed, price, imageUrl }) => {
+  let clickBuy = (event, { name, breed, price, imageUrl , inBasket }, index) => {
     console.log('Buy button clicked!');
     event.preventDefault();
-    if (typeof props.onBuyChange === 'function') {
+
+    if (!inBasket && typeof props.onBuyChange === 'function') {
       props.onBuyChange({ name, breed, price, imageUrl });
-    }
+      setCatData((prevCatData) =>
+      prevCatData.map((cat, i) =>
+        i === index ? { ...cat, inBasket: true } : cat
+      )
+    );
+};
     console.log(name, breed, price, imageUrl);
   };
 
@@ -77,11 +83,11 @@ const BuyCats = (props) => {
               <h3 className="cat-breed">Breed: {cat.breed}</h3>
               <h3 className="cat-price">Price: £{cat.price}</h3>
               <button
-                className="buy-button"
+                className={`buy-button ${cat.inBasket ? 'in-basket' : ''}`}
                 data-item-price={cat.price}
-                onClick={(event) => clickBuy(event, cat)}
+                onClick={(event) => clickBuy(event, cat, index)}
               >
-                Buy now
+                {cat.inBasket ? 'In Basket' : 'Buy now'}
               </button>
             </div>
           </div>

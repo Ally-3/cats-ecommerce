@@ -58,9 +58,10 @@
     background-color: white;
     font-family: Arial;
     letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.buy-button:hover {
+.buy-button:hover, .buy-button.in-basket  {
     background-color: rgb(76, 77, 78);
     color: lightblue;
 }

@@ -4,7 +4,7 @@ import { CatImages } from "../Components/CatImages";
 import '../Components/cat.css';
 import '../App.css';
 
-function Basket({ basketItems, setBasketItems }) {
+function Basket({ cat, basketItems, setBasketItems }) {
 
     const handleDelete = (index) => {
     // Filter out the basketItems array to remove the item we want to delete
@@ -22,9 +22,15 @@ function Basket({ basketItems, setBasketItems }) {
           <ul className="basket-parent">
             {basketItems.map((item, index) => (
                 <li className="basket-child" key={index}>
-                    <div>
-                        <img className="cat-image" src={item.imageUrl} alt={`Cat ${index + 1}`} />
+                    
+                    <div className="cat-image">
+                    {item.imageUrl ? (
+                      <img id="image-cat" className="cat-image" alt="Cat" src={item.imageUrl} />
+                    ) : (
+                      <div className="cat-image">No cat images available</div>
+                    )}
                     </div>
+
                     <div className="basket-text">
                         Name:   {item.name}<br />
                         Breed:  {item.breed}<br />
