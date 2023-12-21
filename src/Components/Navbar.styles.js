@@ -5,6 +5,8 @@ export const NavbarContainer = styled.div`
     top: 0;
     width: 100%;
     z-index: 100; /* Ensure the navbar stays on top of other content */
+    background-color: #91dec688;
+    border-bottom: 2px solid #91DEC6;
 `;
 
 export const Wrapper = styled.div`
@@ -14,11 +16,11 @@ export const Wrapper = styled.div`
     justify-content: center; /* Center items horizontally */
     justify-content: space-evenly;
 
-    background-color: lightblue;
+    // background-color: #91dec688;
     padding: 1% 2%;
-    border-bottom: 5px solid lightblue;
-    border-top: 5px solid lightblue;
-    font-family: arial;
+    // border-bottom: 5px solid #91DEC6;
+    // border-top: 5px solid #91DEC6;
+    font-family: Poppins;
     letter-spacing: 2px;
 
     /* Styles for the image within the heading */
@@ -46,6 +48,7 @@ export const NavbarItem = styled.a`
     text-decoration: none;
     height: 20px;
     border: none;
+    background: none;
 
     &:hover {
     cursor: pointer;
@@ -60,10 +63,11 @@ export const Heading = styled.h1`
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
     letter-spacing: 10px;
-    font-family: cursive;
+    font-family: Poppins;
     color: white;
     -webkit-text-stroke: 0.5px rgb(76, 77, 78);
     margin: 0; /* Remove default margin for h1 */
+    background: none;
 
     &:hover {
         cursor: pointer;
@@ -75,6 +79,7 @@ export const Heading = styled.h1`
 export const Link = styled.a`
     text-decoration: none;
     color: white;
+    background: none;
 
     &:hover {
         cursor: pointer;

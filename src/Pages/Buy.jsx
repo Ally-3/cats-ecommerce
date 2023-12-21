@@ -80,15 +80,17 @@ const BuyCats = (props) => {
             </div>
             <div>
               <h3 className="cat-name">Name: {cat.name} </h3>
-              <h3 className="cat-breed">Breed: {cat.breed}</h3>
-              <h3 className="cat-price">Price: £{cat.price}</h3>
-              <button
-                className={`buy-button ${cat.inBasket ? 'in-basket' : ''}`}
-                data-item-price={cat.price}
-                onClick={(event) => clickBuy(event, cat, index)}
-              >
-                {cat.inBasket ? 'In Basket' : 'Buy now'}
-              </button>
+              <h3 className="cat-breed">Breed:  {cat.breed}</h3>
+              <div className='last-line'>
+                <h3 className="cat-price">£{cat.price}</h3>
+                <button
+                    className={`buy-button ${cat.inBasket ? 'in-basket' : ''}`}
+                    data-item-price={cat.price}
+                    onClick={(event) => clickBuy(event, cat, index)}
+                >
+                    {cat.inBasket ? 'In Basket' : 'Buy now'}
+                </button>
+              </div>
             </div>
           </div>
         ))

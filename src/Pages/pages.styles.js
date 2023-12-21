@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-    background: rgba( 226, 224, 224, 0.4 );
+    background: none;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 17px );
     -webkit-backdrop-filter: blur( 17px );

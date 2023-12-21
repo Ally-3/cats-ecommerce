@@ -1,12 +1,14 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+
 .App {
   text-align: center;
   text-decoration: none;
-  font-family: Arial;
+  font-family: Poppins;
   color: rgb(76, 77, 78);
   letter-spacing: 2px;
-  background-image: url('images/cloudbg.jpg');
+  /* background-image: url('images/cloudbg.jpg');
   background-size: cover; 
-  background-position: center;
+  background-position: center; */
   height: 100%; /* Make the background cover 100% of the viewport height */
   margin: 0; /* Remove default margin */
 }
@@ -52,7 +54,7 @@
 
 h3 {
   font-size: 2em;
-  font-family: cursive;
+  font-family: Poppins;
   line-height: 50px;
   /* color: #282c34; */
   /* -webkit-text-stroke: 0.5px white; */
@@ -70,7 +72,7 @@ h3 {
 
 .text-container p {
   font-size: 1em;
-  font-family: cursive;
+  font-family: Poppins;
 }
 
 .randomcat-container{
@@ -116,6 +118,7 @@ form button:hover {
 .link {
   text-decoration: none;
   color: white;
+  background-color: transparent;
 }
 
 .link:hover {
@@ -129,4 +132,5 @@ img {
   max-width: 100%; /* Adjust the width as needed */
   height: 40px; /* Maintain aspect ratio */
   margin-right: 10px; /* Add some spacing to the right of the image */
+  background: none;
 }

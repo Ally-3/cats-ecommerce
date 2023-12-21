@@ -5,14 +5,14 @@ export const FooterWrapper = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
 
-    position: fixed;
+    // position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     
-    background-color: lightblue;
+    background-color: #F7F7C7;
     padding: 20px 0px;
-    font-family: arial;
+    font-family: Poppins;
     letter-spacing: 2px;
 
     &:hover {
@@ -28,6 +28,7 @@ export const FooterItem = styled.a`
     margin-right: 16px;
     color: rgb(112, 117, 133);
     text-decoration: none;
+    background: none;
 
     &:hover {
     cursor: pointer;
