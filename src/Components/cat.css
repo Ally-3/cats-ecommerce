@@ -6,12 +6,9 @@
     --color-cream: #f0ebe1;
     --color-pink: #E8C4E0;
     --color-cream1: #F7F7C7;
-    --color-orange: #EFD1A9;
+    --color-orange: #f7d6ac;
+    --color-bg: rgb(255, 254, 252);
   }
-
-* {
-    background-color: var(--color-white);
-}
 
 .cat-parent {
     display: grid;
@@ -20,18 +17,24 @@
     justify-content: center;
     width: 60%;
     padding: 5% 0%;
-    margin: 50px auto;
+    margin: 100px auto;
 }
 
 @media (min-width: 768px) {
     .cat-parent {
-        grid-template-columns: repeat(3, 1fr); /* 4 child elements per row on screens wider than 768px */
+        grid-template-columns: repeat(3, 1fr); /* 3 child elements per row on screens wider than 768px */
     }
 }
 
 @media (max-width: 767px) {
     .cat-parent {
         grid-template-columns: repeat(2, 1fr); /* 2 child elements per row on screens 767px and smaller */
+    }
+}
+
+@media (max-width: 600px) {
+    .cat-parent {
+        grid-template-columns: repeat(1, 1fr); /* 2 child elements per row on screens 767px and smaller */
     }
 }
 
@@ -72,7 +75,7 @@
     display: flex;
     align-items: center;
     object-fit: cover;
-    border: 2px solid var(--color-cream1);
+    border: 1px solid var(--color-grey);
 }
 
 .cat-name, .cat-breed, .cat-price {
@@ -82,7 +85,7 @@
 }
 
 .cat-name {
-    color: var(--color-pink);
+    color: lightblue;
     font-size: 12px;
 }
 
@@ -98,6 +101,7 @@
     align-content: center;
     height: 25px;
     font-size: 14px;
+    background-color: transparent;
 }
 
 .cat-price {
@@ -113,7 +117,7 @@
     font-size: 14px;
     color: var(--color-green);
     font-weight: bolder;
-    background-color: none;
+    background-color: transparent;
     font-family: Poppins;
     letter-spacing: 2px;
     transition: background-color 0.3s, color 0.3s;
@@ -125,12 +129,19 @@
 }
 
 /* BASKET */
+
+.basket-title {
+    font-size: 2em;
+    font-family: arial;
+    letter-spacing: 5px;
+}
+
 .basket-parent {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 50%;
     gap: 10px;
     margin: 50px auto;
     padding: 0px;
@@ -142,35 +153,58 @@
     margin: 10px;
     width: 100%;
     max-width: 600px; /* Add a maximum width to prevent it from becoming too wide */
-    padding: 20px; /* Adjusted padding for a cleaner look */
     height: auto;
-    padding: 50px;
-    background-color: rgba(207, 234, 245, 0.74); 
-    border: none;
-    border-radius: 10px;
+    padding: 10px;
+    background-color: none;
+    border-bottom: 2px solid var(--color-grey);
+    border-radius: none;
     box-sizing: border-box; /* Include padding in the total width */
 }
 
 .basket-text {
     flex: 1; /* Allow the text to take up all available space */
     overflow: hidden; /* Prevent text from overflowing its container */
-    height: 150px;
-    /* width: 300px; */
+    height: 250px;
+    width: 240px;
     line-height: 40px;
     margin-left: 30px;
     text-align: left;
-}
-
-.basket-title {
-    font-size: 2em;
-    font-family: arial;
-    letter-spacing: 5px;
-}
-
-.basket-remove {
-    height: 150px;
     display: flex;
-    flex-direction: column-reverse; 
+    flex-direction: column;
+    position: relative; 
+    color: lightblue;
+    word-wrap: break-word;
+}
+
+.basket-text-end {
+    position: absolute; /* Change to absolute positioning */
+    bottom: 0; /* Align to the bottom of .basket-text */
+    left: 0; /* Align to the left of .basket-text */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjust as needed */
+    height: 50px;
+    width: 200px;
+    color: var(--color-green);
+}
+
+.bin-btn {
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    padding: 0px;
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+}
+
+.bin-btn:hover {
+    /* background-color: rgb(240, 39, 39); */
+    border: 2px solid var(--color-grey);
+    border-radius: 10px;
 }
 
 .basket-checkout {
@@ -184,27 +218,16 @@
     padding: 20px; /* Adjusted padding for a cleaner look */
     height: auto;
     padding: 50px;
-    background-color: rgba(207, 234, 245, 0.74); 
+    background-color: none;
     border: none;
     border-radius: 10px;
     box-sizing: border-box; /* Include padding in the total width */
 }
 
-.bin-btn {
-    background-color: transparent;
-    text-decoration: none;
-    border: none;
-    font-size: 30px;
-    height: 40px;
-    width: 40px;
-    padding: 0px;
-    display: flex;
-    align-content: center;
-}
 
-.bin-btn:hover {
-    background-color: rgb(240, 39, 39);
-    border-radius: 10px;
+.basket-checkout p {
+    width: 200px;
+    margin: 0;
 }
 
 .chk-btn {
@@ -212,7 +235,7 @@
     font-family: Arial;
     letter-spacing: 2px;
     text-decoration: none;
-    border: none;
+    border: 2px solid var(--color-grey);
     border-radius: 10px;
     font-size: 12px;
     height: 40px;
@@ -224,6 +247,30 @@
 }
 
 .chk-btn:hover {
-    background-color: rgb(76, 77, 78);
-    color: lightblue;
+    background-color: var(--color-grey);
+    color: var(--color-green);
+}
+
+/* Media query for smaller screens on basket screen*/
+@media (max-width: 767px) {
+    .basket-parent {
+        width: 270px; /* Adjust width for smaller screens */
+    }
+
+    .basket-child {
+        flex-direction: column; /* Stack child elements in a column on smaller screens */
+        width: 270px;
+    }
+
+    .basket-text {
+        width: 270px; /* Allow text to take full width on smaller screens */
+        margin-left: 0; /* Remove left margin on smaller screens */
+        margin-bottom: 10px; /* Add bottom margin to separate text and buttons */
+    }
+
+    .basket-text-end {
+        position: static; /* Reset positioning for smaller screens */
+        width: 270px;
+    }
+
 }

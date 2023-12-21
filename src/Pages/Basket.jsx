@@ -29,20 +29,21 @@ function Basket({ cat, basketItems, setBasketItems }) {
                     ) : (
                       <div className="cat-image">No cat images available</div>
                     )}
-                    </div>
+                  </div>
 
                     <div className="basket-text">
                         Name:   {item.name}<br />
                         Breed:  {item.breed}<br />
                         <br></br>
-                        Price:  £{item.price}
-                    </div>
-                    <div className="basket-remove">
-                        <button 
-                            type="button" 
-                            onClick={() => handleDelete(index)} // Pass the index to handleDelete
-                            className="bin-btn"
-                        >🗑️</button>
+                        {/* Price:  £{item.price} */}
+                      <div className="basket-text-end">
+                          <p>Price:  £{item.price}</p>
+                          <button 
+                              type="button" 
+                              onClick={() => handleDelete(index)} // Pass the index to handleDelete
+                              className="bin-btn"
+                          >🗑️</button>
+                      </div>
                     </div>
                 </li>
             ))}

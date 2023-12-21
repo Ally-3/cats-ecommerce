@@ -9,8 +9,10 @@ export const FooterWrapper = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 100;
     
-    background-color: #F7F7C7;
+    border-top: 2px solid #f7d6ac;
+    background-color: rgb(255, 254, 252);
     padding: 20px 0px;
     font-family: Poppins;
     letter-spacing: 2px;
@@ -26,14 +28,15 @@ export const FooterWrapper = styled.div`
 export const FooterItem = styled.a`
     font-size: 10px;
     margin-right: 16px;
-    color: rgb(112, 117, 133);
+    color: #f7d6ac;
     text-decoration: none;
     background: none;
+    font-weight: bold;
 
     &:hover {
     cursor: pointer;
     text-decoration: none;
-    color: white;
+    color: #4C4D4E;
     }
  `;
 
