@@ -1,11 +1,15 @@
 import '../App.css';
+import catlogo from '../images/catlogo.png';
 
 const Landing = () => {
 
     return (
-        <div className='body-container-l'>
-            <div className='text-container'>
-                <h3>Purr-chase a cat from Whisker World today and bring a slice of fluffy cloud comfort into your home</h3>
+        <div className='App-l'>
+            <div className='body-container-l'>
+                <div className='text-container-l'>
+                <img src={catlogo} className='logo-l' alt="Cat Logo" />  
+                    <h3>Purr-chase a cat from Whisker World today and bring a slice of fluffy cloud comfort into your home</h3>
+                </div>
             </div>
         </div>
     );

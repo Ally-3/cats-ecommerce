@@ -10,6 +10,13 @@
     --color-bg: rgb(255, 254, 252);
   }
 
+.cat-bg {
+    background-color: var(--color-bg);
+    background-size:auto; 
+    background-position: center;
+    /* height: 100vh;  */
+}
+
 .cat-parent {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -156,7 +163,7 @@
     height: auto;
     padding: 10px;
     background-color: none;
-    border-bottom: 2px solid var(--color-grey);
+    border-bottom: 2px solid var(--color-orange);
     border-radius: none;
     box-sizing: border-box; /* Include padding in the total width */
 }

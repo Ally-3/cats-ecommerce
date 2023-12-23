@@ -65,6 +65,7 @@ const BuyCats = (props) => {
   };
 
   return (
+    <div className='cat-bg'>
     <div className="cat-parent">
       {loading ? (
         <h1 style={{width: '100%', height: '100vh', margin: 0,  backgroundSize: '100% 100%' }}>Loading...</h1>
@@ -93,8 +94,10 @@ const BuyCats = (props) => {
               </div>
             </div>
           </div>
+
         ))
       )}
+    </div>
     </div>
   );
   

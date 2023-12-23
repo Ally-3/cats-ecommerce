@@ -22,6 +22,7 @@ function App() {
   };
 
   return (
+    <div>
     <div className="App">
       {/* Remember to import:
       import { BrowserRouter, Route, Routes } from 'react-router-dom'; */}
@@ -33,10 +34,10 @@ function App() {
           <Route path="/Buy" element={<BuyCats onBuyChange={handleBuyChange}/> } />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Basket" element={<Basket basketItems={basketItems} setBasketItems={setBasketItems} imageUrl={imageUrl} />} />
-
         </Routes>
       </BrowserRouter>
-      <Footer />
+    </div>
+    <div><Footer /></div>
     </div>
   );
 }

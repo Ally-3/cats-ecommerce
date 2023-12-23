@@ -12,7 +12,7 @@ export const FooterWrapper = styled.div`
     z-index: 100;
     
     border-top: 2px solid #f7d6ac;
-    background-color: rgb(255, 254, 252);
+    background-color: transparent;
     padding: 20px 0px;
     font-family: Poppins;
     letter-spacing: 2px;
@@ -22,7 +22,7 @@ export const FooterWrapper = styled.div`
         margin: none;
         cursor: pointer;
         text-decoration: none;
-     }
+    }
 `;
 
 export const FooterItem = styled.a`

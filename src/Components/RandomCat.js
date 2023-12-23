@@ -10,7 +10,7 @@ function RandomCat() {
     <div className='randomcat-container'>
       <h2><img src={catlogo} alt="Cat Logo" />  
         Here is a random cat:</h2>
-      <p>Type: {randomCat}</p>
+      <p>Type: {randomCat} 😽 </p>
     </div>
   );
 }

@@ -1,17 +1,22 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
 
+:root {
+  --color-grey: #4C4D4E;
+  --color-green: #91DEC6;
+  --color-cream: #f0ebe1;
+  --color-pink: #E8C4E0;
+  --color-cream1: #F7F7C7;
+  --color-orange: #f7d6ac;
+  --color-bg: rgb(255, 254, 252);
+}
+
 .App {
   text-align: center;
   text-decoration: none;
   font-family: Poppins;
   color: rgb(76, 77, 78);
   letter-spacing: 2px;
-  /* background-image: url('images/cloudbg.jpg');
-  background-size: cover; 
-  background-position: center; */
-  height: 100%; /* Make the background cover 100% of the viewport height */
   margin: 0; /* Remove default margin */
-  background-color: var(--color-bg);
 }
 
 .App-header {
@@ -36,26 +41,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center vertically */
-  min-height: 70vh; /* Ensure the container takes at least the full height of the viewport */
+  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
   margin: 0; /* Remove default margin */
   padding: 10%;
 
   /* background-image: url('images/cloudbg.jpg');
   background-size: cover; 
   background-position: center; */
-}
-
-.body-container-l{
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center vertically */
-  min-height: 70vh; /* Ensure the container takes at least the full height of the viewport */
-  margin: 0; /* Remove default margin */
-  padding: 15% 15% 5%;
-
-  background-image: url('images/cloudbg.jpg');
-  background-size: cover; 
-  background-position: center;
 }
 
 .text-container{
@@ -89,9 +81,53 @@ h3 {
   font-family: Poppins;
 }
 
-.randomcat-container{
+/* LANDING */
+
+.App-l {
+  text-align: center;
+  text-decoration: none;
+  font-family: Poppins;
+  color: rgb(76, 77, 78);
+  letter-spacing: 2px;
+  background-image: url('images/cloudbg.jpg');
+  background-size: cover; 
+  background-position: center;
+  height: 100vh; 
+  /* Make the background cover 100% of the viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+.body-container-l{
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Center vertically */
+  min-height: 70vh; /* Ensure the container takes at least the full height of the viewport */
+  margin: 0; /* Remove default margin */
+  padding: 15% 15% 5%;
+  
+  background-image: url('images/cloudbg.jpg');
+  background-size: cover; 
+  background-position: center;
+}
+
+.text-container-l{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20vh; /* Ensure the container takes at least the full height of the viewport */
+  margin: 0; /* Remove default margin */
+  color: var(--color-orange);
+}
+
+.text-container-l h3{
+  color: var(--color-grey);
+  /* -webkit-text-stroke: 0.1px var(--color-grey); */
+  width: 500px;
+}
+
+.logo-l {
+  height: 200px;
+  width: auto;
 }
 
 /* CONTACT FORM */
@@ -152,7 +188,7 @@ img {
 /* ABOUT US */
 
 .about-h1 {
-  margin: 150px 0px auto;
+  margin: 150px 0px 50px auto;
   font-size: 2.5em;
   font-family: Poppins;
   line-height: 50px;
@@ -165,32 +201,47 @@ img {
   width: auto;
 }
 
-
 .about-child {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   word-wrap: break-word;
-  width: 600px;
-  height: 300px;
+  width: 500px;
+  height: 250px;
+  border-bottom: 2px solid var(--color-orange);
 }
 
 .about-child h2,
 .about-child p {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   align-self: center;
-  justify-content: space-around;
   flex-wrap: wrap;
-  width: 300px;
+  width: 500px;
   padding: 0px 20px;
 }
 
 .about-child p {
-  height: 300px;
+  height: 100px;
   text-align: left;
 }
 
 .about-child h2 {
+  color: lightblue;
+  height: 100px;
+}
+
+.randomcat-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: flex-start;
+  width: 500px;
+  height: 120px;
+}
+
+.randomcat-container h2{
   color: lightblue;
 }
