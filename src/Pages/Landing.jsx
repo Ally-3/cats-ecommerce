@@ -8,7 +8,7 @@ const Landing = () => {
             <div className='body-container-l'>
                 <div className='text-container-l'>
                 <img src={catlogo} className='logo-l' alt="Cat Logo" />  
-                    <h3>Purr-chase a cat from Whisker World today and bring a slice of fluffy cloud comfort into your home</h3>
+                    <h3>Adopt a cat from Purrfect Planet today and bring a slice of fluffy cloud comfort into your home</h3>
                 </div>
             </div>
         </div>
