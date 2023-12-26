@@ -13,7 +13,7 @@ import BuyCats from './Pages/Buy';
 function App() {
 
   const [basketItems, setBasketItems] = useState([]);
-  const [imageUrl, setImageUrl] = useState ([]);
+  const [imageUrl] = useState ([]);
 
   const handleBuyChange = (catDetails) => {
     // Update the basketItems state with the new catDetails

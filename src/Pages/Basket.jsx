@@ -1,6 +1,4 @@
 import React from "react";
-import { useState} from 'react';
-import { CatImages } from "../Components/CatImages";
 import '../Components/cat.css';
 import '../App.css';
 

@@ -7,8 +7,8 @@ import '../App.css';
 
 const Navbar = () => {
 
-const [handleBuyChange, setHandleBuyChange] = useState("");
-const [clickBuy, setClickBuy] = useState("");
+const [handleBuyChange] = useState("");
+const [clickBuy] = useState("");
 
    return (
      <div>
