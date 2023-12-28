@@ -63,10 +63,10 @@
     /* flex: 1;  */
 }
 
-.cat-child h3 {
+/* .cat-child h3 {
     margin: none;
     line-height: 2px;
-}
+} */
 
 .cat-child p {
     font-size: 12px;
@@ -89,9 +89,10 @@
 .cat-name, .cat-breed {
     width: 250px;
     height: 1em;
-    font-size: 1em;
+    font-size: 16px;
     font-family: 'Poppins';
     word-wrap: break-word; /* This property enables word wrap */
+    line-height: 2px;
 }
 
 .cat-name {
@@ -101,6 +102,7 @@
 
 .cat-breed {
     color: var(--color-orange);
+    white-space: normal;
 }
 
 .last-line {
@@ -112,6 +114,7 @@
     font-family: 'Poppins';
     background-color: transparent;
     margin-top: 0.5em;
+    
 }
 
 .cat-price {
@@ -122,6 +125,7 @@
     font-size: 16px;
     font-family: 'Poppins';
     word-wrap: break-word; /* This property enables word wrap */
+    line-height: 2px;
 }
 
 .buy-button {

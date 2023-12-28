@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const FooterWrapper = styled.div`
     display: flex;
@@ -26,7 +27,7 @@ export const FooterWrapper = styled.div`
     }
 `;
 
-export const FooterItem = styled.a`
+export const FooterItem = styled(Link)`
     font-size: 10px;
     margin-right: 16px;
     color: #f7d6ac;
