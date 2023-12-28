@@ -13,8 +13,9 @@
 
 .cat-bg {
     background-color: var(--color-bg);
-    background-size: 100vh; 
+    background-size: cover; 
     background-position: center;
+    height: 100%; 
 }
 
 .cat-parent {
@@ -24,7 +25,7 @@
     justify-content: center;
     width: 60%;
     padding: 5% 0%;
-    margin: 100px auto;
+    margin: 100px auto 0px;
 }
 
 @media (min-width: 768px) {
@@ -85,7 +86,7 @@
     border: 1px solid var(--color-grey);
 }
 
-.cat-name, .cat-breed, .cat-price {
+.cat-name, .cat-breed {
     width: 250px;
     height: 1em;
     font-size: 1em;
@@ -107,7 +108,7 @@
     flex-direction: row;
     align-content: center;
     height: 25px;
-    font-size: 1em;
+    font-size: 16px;
     font-family: 'Poppins';
     background-color: transparent;
     margin-top: 0.5em;
@@ -116,16 +117,21 @@
 .cat-price {
     color: var(--color-green);
     font-weight: bolder;
+    width: 100px;
+    height: 1em;
+    font-size: 16px;
+    font-family: 'Poppins';
+    word-wrap: break-word; /* This property enables word wrap */
 }
 
 .buy-button {
-    width: 200px;
+    width: 150px;
     /* height: 50px; */
     border: none;
     color: var(--color-green);
     font-weight: bolder;
     background-color: transparent;
-    font-size: 1em;
+    font-size: 16px;
     font-family: 'Poppins';
     letter-spacing: 2px;
     transition: background-color 0.3s, color 0.3s;
