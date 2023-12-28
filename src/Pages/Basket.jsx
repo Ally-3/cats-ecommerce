@@ -31,7 +31,7 @@ function Basket({ cat, basketItems, setBasketItems }) {
 
                     <div className="basket-text">
                         Name:   {item.name}<br />
-                        Breed:  {item.breed}<br />
+                        <div className="cat-breed">Breed:  {item.breed}</div><br />
                         <br></br>
                         {/* Price:  £{item.price} */}
                       <div className="basket-text-end">

@@ -48,7 +48,6 @@ export const NavbarItem = styled.a`
 
     &:hover {
         cursor: pointer;
-        color: rgb(76, 77, 78);
         text-decoration: none;
     }
 
@@ -73,7 +72,6 @@ export const Heading = styled.h1`
 
     &:hover {
         cursor: pointer;
-        color: rgb(76, 77, 78);
         text-decoration: none;
     }
 `;
@@ -85,7 +83,7 @@ export const Link = styled.a`
 
     &:hover {
         cursor: pointer;
-        color: rgb(76, 77, 78);
+        color: #91DEC6;
         text-decoration: none;
     }
 

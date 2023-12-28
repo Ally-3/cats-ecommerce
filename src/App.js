@@ -35,9 +35,9 @@ function App() {
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Basket" element={<Basket basketItems={basketItems} setBasketItems={setBasketItems} imageUrl={imageUrl} />} />
         </Routes>
+        <div><Footer /></div>
       </BrowserRouter>
     </div>
-    <div><Footer /></div>
     </div>
   );
 }

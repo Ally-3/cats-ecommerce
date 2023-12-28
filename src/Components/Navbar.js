@@ -16,7 +16,7 @@ const [clickBuy] = useState("");
        <Wrapper>
          <Heading>
             <img src={catlogo} alt="Cat Logo" />
-            <Link to="/" className='link'>
+            <Link to="/" className='link-name'>
              Purrfect Planet
             </Link>
          </Heading>

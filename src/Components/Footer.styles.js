@@ -12,7 +12,8 @@ export const FooterWrapper = styled.div`
     z-index: 100;
     
     border-top: 2px solid #f7d6ac;
-    background-color: transparent;
+    // background-color: transparent;
+    background-color: #4C4D4E;
     padding: 20px 0px;
     font-family: Poppins;
     letter-spacing: 2px;
@@ -36,7 +37,7 @@ export const FooterItem = styled.a`
     &:hover {
     cursor: pointer;
     text-decoration: none;
-    color: #4C4D4E;
+    color: #91DEC6;
     }
  `;
 

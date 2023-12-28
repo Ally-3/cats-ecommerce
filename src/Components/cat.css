@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Unica+One&display=swap);
 
 :root {
     --color-grey: #4C4D4E;
@@ -12,9 +13,8 @@
 
 .cat-bg {
     background-color: var(--color-bg);
-    background-size:auto; 
+    background-size: 100vh; 
     background-position: center;
-    /* height: 100vh;  */
 }
 
 .cat-parent {
@@ -87,19 +87,19 @@
 
 .cat-name, .cat-breed, .cat-price {
     width: 250px;
-    height: 20px;
+    height: 1em;
+    font-size: 1em;
+    font-family: 'Poppins';
     word-wrap: break-word; /* This property enables word wrap */
 }
 
 .cat-name {
     color: lightblue;
-    font-size: 12px;
+
 }
 
 .cat-breed {
     color: var(--color-orange);
-    font-size: 12px;
-    margin-bottom: 0;
 }
 
 .last-line {
@@ -107,28 +107,30 @@
     flex-direction: row;
     align-content: center;
     height: 25px;
-    font-size: 14px;
+    font-size: 1em;
+    font-family: 'Poppins';
     background-color: transparent;
+    margin-top: 0.5em;
 }
 
 .cat-price {
     color: var(--color-green);
     font-weight: bolder;
-    font-size: 14px;
 }
 
 .buy-button {
-    width: 150px;
+    width: 200px;
     /* height: 50px; */
     border: none;
-    font-size: 14px;
     color: var(--color-green);
     font-weight: bolder;
     background-color: transparent;
-    font-family: Poppins;
+    font-size: 1em;
+    font-family: 'Poppins';
     letter-spacing: 2px;
     transition: background-color 0.3s, color 0.3s;
-    align-self: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .buy-button:hover, .buy-button.in-basket  {
@@ -199,6 +201,8 @@
     position: relative; 
     color: lightblue;
     word-wrap: break-word;
+    font-size: 1em;
+    font-family: 'Poppins';
 }
 
 .basket-text-end {
@@ -209,8 +213,11 @@
     flex-direction: row;
     justify-content: space-between; /* Adjust as needed */
     height: 50px;
-    width: 200px;
+    width: 250px;
     color: var(--color-green);
+    font-size: 1em;
+    font-family: 'Poppins';
+    font-weight: bold;
 }
 
 .bin-btn {
