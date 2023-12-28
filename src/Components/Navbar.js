@@ -17,12 +17,12 @@ const [clickBuy] = useState("");
          <Heading>
             <img src={catlogo} alt="Cat Logo" />
             <Link to="/" className='link'>
-             purrfect planet
+             Purrfect Planet
             </Link>
          </Heading>
          <Wrapper>
            <NavbarItem>
-             <Link to="/Buy" className='link' onBuyChange={handleBuyChange}>Buy</Link>
+             <Link to="/Buy" className='link' onBuyChange={handleBuyChange}>Adopt</Link>
            </NavbarItem>
            <NavbarItem>
              <Link to="/Basket" className='link' onBuyChange={clickBuy} >Basket</Link>

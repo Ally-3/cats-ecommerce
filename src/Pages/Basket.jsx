@@ -11,12 +11,12 @@ function Basket({ cat, basketItems, setBasketItems }) {
   };
 
     return (
-      <div className="body-container">
+      <div className="basket-container">
+      <div className="basket-bg">
         <h2 className="basket-title">Your Basket</h2>
         {basketItems.length === 0 ? (
           <p>Your basket is empty.</p>
-        ) : (
-          <div>  
+        ) : (    
           <ul className="basket-parent">
             {basketItems.map((item, index) => (
                 <li className="basket-child" key={index}>
@@ -45,15 +45,16 @@ function Basket({ cat, basketItems, setBasketItems }) {
                     </div>
                 </li>
             ))}
+                <div className="basket-checkout">
+                  <p>Total:{basketItems.reduce((sum, item) => sum + Number(item.price), 0).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}</p><br />
+                  <button className="chk-btn">Proceed to checkout</button>
+                </div>
           </ul>
-            <div className="basket-checkout">
-                <p>Total:{basketItems.reduce((sum, item) => sum + Number(item.price), 0).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}</p><br />
-                <button className="chk-btn">Proceed to checkout</button>
-            </div>
+          )}
+ 
           </div>
-        )}
-      </div>
-    );
-  }
+        </div>
+  );
+}
   
   export default Basket;

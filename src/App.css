@@ -19,21 +19,17 @@
   margin: 0; /* Remove default margin */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  text-decoration: none;
-}
-
 .App-link {
   color: #61dafb;
 }
+
+/* body {
+  background-image: url('images/cat2.png');
+  background-size: cover; 
+  background-position: center;
+  height: 100vh; 
+  width: 100%;
+} */
 
 /* TEXT CONTAINERS */
 
@@ -41,21 +37,34 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center vertically */
-  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+  height: 100vh;
   margin: 0; /* Remove default margin */
   padding: 10%;
-
-  /* background-image: url('images/cloudbg.jpg');
-  background-size: cover; 
-  background-position: center; */
+  background: none;
 }
 
 .text-container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 20vh; /* Ensure the container takes at least the full height of the viewport */
+  height: 20vh; /* Ensure the container takes at least the full height of the viewport */
   margin: 0; /* Remove default margin */
+}
+
+.body-container-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  height: 100vh;
+  margin-top: 5rem; /* Remove default margin */
+  padding: 10%;
+  background: none;
+}
+
+.text-container-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h3 {
@@ -86,43 +95,68 @@ h3 {
 .App-l {
   text-align: center;
   text-decoration: none;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   color: rgb(76, 77, 78);
   letter-spacing: 2px;
-  background-image: url('images/cloudbg.jpg');
+  height: 100vh; 
+  margin: 0; /* Remove default margin */
+
+  background-image: url('images/cat3.png');
   background-size: cover; 
   background-position: center;
-  height: 100vh; 
-  /* Make the background cover 100% of the viewport height */
-  margin: 0; /* Remove default margin */
+  width: 100%;
+  background-color: #f0f0f0;
 }
 
 .body-container-l{
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  min-height: 70vh; /* Ensure the container takes at least the full height of the viewport */
   margin: 0; /* Remove default margin */
   padding: 15% 15% 5%;
-  
-  background-image: url('images/cloudbg.jpg');
-  background-size: cover; 
-  background-position: center;
 }
 
 .text-container-l{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  min-height: 20vh; /* Ensure the container takes at least the full height of the viewport */
+  align-items: flex-end;
+  
+  height: 20vh; /* Ensure the container takes at least the full height of the viewport */
   margin: 0; /* Remove default margin */
   color: var(--color-orange);
 }
 
 .text-container-l h3{
-  color: var(--color-grey);
+  color: var(--color-green);
   /* -webkit-text-stroke: 0.1px var(--color-grey); */
-  width: 500px;
+  width: 30rem;
+  background-color: rgba(19, 18, 18, 0.5);
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .App-l {
+  background-image: url('images/cat1.png');
+  background-size: cover; 
+  background-position: center;
+  width: auto;
+  }
+  .text-container-l{
+    align-items: center;
+    height: 30vh;
+    margin-top: 2rem;
+  }
+  .body-container-l {
+    padding: 4em 0em;
+  }
+  .text-container-l h3{
+    font-size: 1em;
+    line-height: 2em;
+    word-wrap: normal;
+    width: 100%;
+    max-width: none;
+    border-radius: 0px;
+  }
 }
 
 .logo-l {

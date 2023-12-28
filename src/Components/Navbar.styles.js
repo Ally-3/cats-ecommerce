@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+const baseFontSize = 16; 
+
 export const NavbarContainer = styled.div`
     position: fixed;
     top: 0;
@@ -12,37 +14,31 @@ export const NavbarContainer = styled.div`
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    justify-content: space-evenly;
-
-    // background-color: #91dec688;
+    align-items: center;
+    justify-content: space-between;
     padding: 1% 2%;
-    // border-bottom: 5px solid #91DEC6;
-    // border-top: 5px solid #91DEC6;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
 
-    /* Styles for the image within the heading */
     img {
-      max-width: 100%; /* Adjust the width as needed */
-      height: 40px; /* Maintain aspect ratio */
-      margin-right: 10px; /* Add some spacing to the right of the image */
+        max-width: 100%;
+        height: 40px;
+        margin-right: 10px;
     }
 
     &:hover {
         cursor: pointer;
         text-decoration: none;
-     }
+    }
 `;
 
 export const NavbarItem = styled.a`
     display: flex;
     text-align: center;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    font-size: 16px;
-    margin: 0 10px; /* Add margin to the items for spacing */
+    align-items: center;
+    justify-content: center;
+    font-size: ${baseFontSize}px; /* Set base font size */
+    margin: 0 10px;
     margin-left: 50px;
     color: white;
     text-decoration: none;
@@ -51,29 +47,35 @@ export const NavbarItem = styled.a`
     background: none;
 
     &:hover {
-    cursor: pointer;
-    color: rgb(76, 77, 78);
-    text-decoration: none;
- }
- `;
+        cursor: pointer;
+        color: rgb(76, 77, 78);
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        margin: 10px 0;
+        margin-left: 1em;
+        font-size: ${baseFontSize - 7}px;
+    }
+`;
 
 export const Heading = styled.h1`
     display: flex;
     text-align: center;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    justify-content: center;
     letter-spacing: 10px;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     color: white;
     -webkit-text-stroke: 0.5px rgb(76, 77, 78);
-    margin: 0; /* Remove default margin for h1 */
+    margin: 0;
     background: none;
 
     &:hover {
         cursor: pointer;
         color: rgb(76, 77, 78);
         text-decoration: none;
-     }
+    }
 `;
 
 export const Link = styled.a`
@@ -86,4 +88,5 @@ export const Link = styled.a`
         color: rgb(76, 77, 78);
         text-decoration: none;
     }
+
 `;
